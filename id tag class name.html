@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>heading</h1>
+    <p>paragraph1</p>
+    <p id="p1">paragraph2</p>
+    <p class="p2">paragraph3</p>
+    <p id="text"></p>
+    <button id="btn" onclick=btnfunc();>click me</button>
+
+
+    <script >
+
+        console.log(document.getElementById("p1"));
+        console.log(document.getElementsByClassName('p2'));
+        console.log(document.getElementsByTagName('h1'));
+        console.log(document.getElementsByTagName('p'));
+        console.log(document.getElementById('text').innerHTML="hello guys");
+        document.createElement('h2').innerText="heading two";
+        function btnfunc()
+        {
+            document.getElementById('btn').innerHTML="thisnis button";
+        }
+
+    </script>
+</body>
+</html>
