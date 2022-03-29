@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+      
+            <!--<p id="message">A paragraph</p> -->
+      
+            <h1>JavaScript getElementsByTagName() Demo</h1>
+            <h2>First heading</h2>
+            <p>This is the first paragraph.</p>
+            <h2>Second heading</h2>
+            <p>This is the second paragraph.</p>
+            <h2>Third heading</h2>
+            <p>This is the third paragraph.</p>
+            <p>Finding HTML Elements by Class Name.</p>
+            <p class="intro">Hello World!</p>
+            <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+        <p id="demo"></p>
+            <button id="btnCount" onclick=btn()>Count H2</button>
+            <ul class="list">
+                <li>Golden Girls</li>
+                <li>Archer</li>
+                <li>Rick and Morty</li>
+                <li>The Crown</li>
+              </ul>
+
+
+    <script>
+       // <!-- const p = document.getElementById('message');
+        //console.log(p); //   <p id="message">A paragraph</p> -->
+        //let result=document.getElementsByTagName('h2'); // result ke andhar 3 h2 with index 0,1,2
+        //console.log(result);
+        //let demo=document.getElementById('demo').innerHTML="para without content" + result[0].innerHTML;
+let x=document.getElementsByTagName('p');
+console.log(x); // length 7 // 0,1,2,3,intro,intro,demo
+let y=document.getElementsByClassName('intro');
+console.log(y); // p.intro,p.intro
+let z=document.getElementById('demo');
+console.log(z.innerHTML="hello guys"+ " "+x[3].innerHTML);
+function btn()
+{
+   //const result=document.getElementById('btncount');
+   let heading=document.getElementsByTagName('h2');
+   alert (`number of h2 heading is:${heading.length}`);
+}
+const m = document.querySelectorAll("p.intro");
+console.log(m); // nodelist(2) p.intro p.intro
+
+const list = document.querySelector(".list");
+console.log(list);
+</script>
+</body>
+</html>
